@@ -1,0 +1,10 @@
+{{ define "title" }}
+  {{ .Title }} &ndash; {{ .Site.Title }}
+{{ end }}
+{{ define "main" }}
+  <img src="{{ .Params.Image }}" id="post-image"></img>
+  <h1 id="post-title">{{ .Title }}</h1>
+  {{ .Content }}
+{{ end }}
+
+

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <base href=".">
+    <title>{{ block "title" . }}
+      {{ .Site.Title }}
+    {{ end }}</title>
+    <style>
+body {
+  font-family: sans-serif;
+  background-color: rgb(240, 240, 240);
+  color: #222;
+}
+
+blockquote {
+  margin: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: serif;
+  font-style: italic;
+  border-left: 2px solid #888;
+}
+
+a {
+  color: #4096EE;
+}
+
+#content {
+  background-color: white;
+  max-width: 700px;
+  margin: 0px auto;
+  padding: 5px;
+}
+
+#content img {
+  max-width: 710px;
+  margin-left: -5px;
+}
+
+h1 a {
+  color: #333;
+}
+
+#post-title {
+  font-family: sans-serif;
+  letter-spacing: 2px;
+  position: relative;
+  margin-top: -60px;
+  font-size: 29px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: block;
+  margin-left: -5px;
+  width: 710px;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+  z-index: 1;
+}
+#post-image {
+  position: relative;
+  margin-top: -5px;
+  max-width: 710px;
+  z-index: 0;
+}
+    </style>
+  </head>
+  <body>
+    <center><h1><a href="/">theoldfuture.com</a></h1></center>
+    <div id="content">
+      {{ block "main" . }}
+      {{ end }}
+      {{ block "footer" . }}
+      {{ end }}
+    </div>
+    <center><h1><a href="/">theoldfuture.com</a></h1></center>
+    <center><a href="mailto:email@theoldfuture.com">email@theoldfuture.com</a></center>
+  </body>
+</html>
+
